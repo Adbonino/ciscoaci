@@ -1,0 +1,14 @@
+---
+- name: Consultar info de un tenant de ACI
+  hosts: localhost
+
+  tasks:
+    - name: Add a  new tenant
+      cisco.aci.aci_tenant:
+        host: 10.54.100.243
+        username: admin
+        password: cisco123
+        tenant: AdrianTextTenant
+        description: Tenant text Ansible playbooks
+        state: present  
+        validate_certs: no
